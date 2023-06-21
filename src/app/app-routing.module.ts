@@ -7,9 +7,10 @@ import { IngresarPresupuestoComponent } from './components/ingresar-presupuesto/
 import { GastosComponent } from './components/gastos/gastos.component';
 
 const routes: Routes = [
-  {path:'ingresarPresupuesto', component:IngresarPresupuestoComponent},
-  {path: 'gastos', component: GastosComponent}
-
+  { path: '', redirectTo: '/ingresarPresupuesto', pathMatch: 'full' },
+  { path:'ingresarPresupuesto', component:IngresarPresupuestoComponent},
+  { path: 'gastos', component: GastosComponent},
+  { path: '**', redirectTo: '/ingresarPresupuesto', pathMatch: 'full'  }
 
 
 ];
